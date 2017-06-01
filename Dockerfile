@@ -2,7 +2,7 @@ FROM armhf/alpine
 
 RUN apk update && apk upgrade && \
   apk add --no-cache \
-  sudo nano git bash
+  sudo bash
 
 RUN echo "docker ALL=(ALL) ALL" | tee -a /etc/sudoers && \
   adduser -S -s /bin/bash docker && \
