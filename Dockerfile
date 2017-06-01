@@ -1,4 +1,3 @@
-#FROM mattwiater/piarmy-webserver
 FROM armhf/alpine
 
 COPY containerFiles /www

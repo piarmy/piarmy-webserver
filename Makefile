@@ -40,19 +40,36 @@ endif
 	@echo "--------------------"
 	@echo ""
 
-commit: build
-	$(eval $IMAGE_ID = $(shell docker run -d --rm -p 9999:80 --name $(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME)))
-	@docker commit $(IMAGE_ID) $(DOCKER_IMAGE_NAME)
-
-	@echo "Committed: $(DOCKER_IMAGE_NAME)"
-	@echo ""
-
+push: build
 	docker push $(DOCKER_IMAGE_NAME)
 
 	@echo "Pushed: $(DOCKER_IMAGE_NAME)"
 	@echo ""
 
-	@docker rm --force $(IMAGE_ID)
-
-	@echo "Removed: $(DOCKER_IMAGE_NAME)"
+run:
+	# If matching service is found, remove it
+ifeq ($(strip $(IMAGE_SERVICE_ID)),)
+	@echo "No matching services found for $(DOCKER_TASKNAME), nothing to do..."
 	@echo ""
+else
+	@echo "Shutting down service: $(DOCKER_TASKNAME)"
+	@docker service rm $(DOCKER_TASKNAME) > /dev/null 2>&1
+	@echo ""
+endif
+
+# If matching image is found, remove it
+ifeq ($(IMAGE_ID),)
+	@echo "No matching images found for $(DOCKER_TASKNAME), nothing to do..."
+	@echo ""
+else
+	@echo "Removing image: $(IMAGE_ID)"
+	@docker rm --force $(IMAGE_ID) > /dev/null 2>&1
+	@echo ""
+endif
+
+	docker service create \
+	  --name=piarmy-webserver \
+	  --network=piarmy \
+	  --replicas=4 \
+	  -p 9999:80 \
+	  mattwiater/piarmy-webserver
