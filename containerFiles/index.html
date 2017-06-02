@@ -31,6 +31,27 @@
 
 </head>
 
+<style>
+section.success {
+    padding-bottom: 100px;
+    padding-top: 0px;
+}
+
+div#maincontent {
+    padding-bottom: 50px;
+    padding-top: 150px;
+}
+
+ul.links {
+    font-size: 1.5em;
+}
+
+ul.links li {
+    list-style-type: none;
+}
+
+</style>
+
 <body id="page-top" class="index">
 <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
 
@@ -39,9 +60,6 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
                 <a class="navbar-brand" href="#page-top">PiArmy</a>
             </div>
         </div>
@@ -53,12 +71,12 @@
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/pi.jpg" alt="">
                     <div class="intro-text">
-                        <h1 class="name">Start Bootstrap</h1>
+                        <h1 class="name">PiArmy</h1>
                         <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                        <span class="skills">Adventures with an Army of Raspberry Pis</span>
                     </div>
+                    <img style="margin-top: 50px;" class="img-responsive" src="img/pi.png" alt="">
                 </div>
             </div>
         </div>
@@ -75,16 +93,26 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>This is splash page to demonstrate a simple webserver service for the <a style="color:#fff;text-decoration: underline;" target="_blank" href="http://piarmy.ngrok.io/">PiArmy project</a>. <em>Build the bots! Release the bots! Obey the bots!</em></p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>Credit where credit is due: This is the <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> theme from <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com">startbootstrap.com</a>.</p>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
-                    </a>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-12 text-center">
+                    <h2>Links</h2>
+                    <hr class="star-light">
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-lg-offset-3">
+                    <ul class="links">
+                        <li><i class="fa fa-fw fa-rocket" aria-hidden="true"></i> PiArmy Blog: <a style="color:#fff;text-decoration: underline;" target="_blank" href="http://piarmy.ngrok.io">piarmy.ngrok.io</a></li>
+                        <li><i class="fa fa-fw fa-rocket" aria-hidden="true"></i> Repository for this project: <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/mwiater/piarmy-webserver">github.com/mwiater/piarmy-webserver</a></li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -95,7 +123,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; PiArmy 2017
+                        &copy; PiArmy <script>document.write(new Date().getFullYear());</script>
                     </div>
                 </div>
             </div>
