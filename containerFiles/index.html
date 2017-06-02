@@ -1,99 +1,130 @@
-<html><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="theme.css" type="text/css">
-  <title>Pingendo - mobile app</title>
-  <meta name="description" content="Pingendo app landing page">
-  <meta name="keywords" content="Pingendo app mobile responsive ios android"> </head><body class="text-center">
-  <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="#cover">PiArmy</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link" href="features.html"></a>
-          </li>
-          
-        </ul>
-        
-      </div>
-    </div>
-  </nav>
-  <div class="cover d-flex align-items-center pt-5 bg-primary" id="cover">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-md-left align-self-center my-5">
-          <h1 class="text-white display-1">PiArmy</h1>
-          <h4 class="text-white">The Bots are Rising Up!</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="section py-5" id="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="pb-4 text-primary">Raspberry Pi</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="align-self-center text-right col-lg-4 col-md-6">
-          <div class="row my-5">
-            <div class="col-10">
-              <h4>Responsive design</h4>
-              <p>Based on fluid design principles.
-                <br>Works with screen resolution</p>
-            </div>
-            <div class="col-2"><i class="d-block fa fa-3x fa-columns"></i></div>
-          </div>
-          <div class="row my-5">
-            <div class="col-10">
-              <h4>Customized settings</h4>
-              <p>Choose settings depending on the criteria you value the most</p>
-            </div>
-            <div class="col-2"><i class="d-block fa  fa-3x fa-circle-thin"></i></div>
-          </div>
-        </div>
-        <div class="my-3 col-lg-4 col-md-6">
-          <img class="img-fluid d-block mx-auto" src="raspberry_pi_3.jpg"> </div>
-        <div class="align-self-center text-left col-lg-4 col-md-12">
-          <div class="row my-5">
-            <div class="col-3"><i class="d-block fa fa-battery-empty fa-3x"></i></div>
-            <div class="col-9">
-              <h4>Battery-friendly</h4>
-              <p>Non consuming background operation for longer mobile life</p>
-            </div>
-          </div>
-          <div class="row my-5">
-            <div class="col-3"><i class="d-block mx-auto fa  fa-3x fa-clone"></i></div>
-            <div class="col-9">
-              <h4>Multilayers</h4>
-              <p>Work simultaneously on different panels with the switcher</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <div class="py-5 bg-info" id="footer">
-    <div class="container">
-      
-      <div class="row">
-        <div class="col-md-12 my-3">
-          <p>© Copyright 2017 PiArmy - All rights reserved. </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-  <script src="https://pingendo.com/assets/scripts/smooth-scroll.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-</body></html>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PiArmy</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">PiArmy</a>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/pi.jpg" alt="">
+                    <div class="intro-text">
+                        <h1 class="name">Start Bootstrap</h1>
+                        <hr class="star-light">
+                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; PiArmy 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>

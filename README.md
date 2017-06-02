@@ -9,5 +9,6 @@ docker run -d --rm -p 9999:80 --name piarmy-ws-server mattwiater/piarmy-webserve
 docker service create \
   --name=piarmy-webserver \
   --network=piarmy \
-  -p 9999:8888 \
+  --replicas=4 \
+  -p 9999:80 \
   mattwiater/piarmy-webserver:latest
