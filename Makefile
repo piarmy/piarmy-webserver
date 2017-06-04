@@ -14,7 +14,7 @@ DOCKER_USERNAME   = mattwiater
 # Don't edit below this line
 
 # Best to leave as piarmy-alpine for common namespacing of PiArmy projects
-DOCKER_TASKNAME   = piarmy-webserver
+DOCKER_TASKNAME   = piarmy-alpine
 DOCKER_IMAGE_NAME = $(DOCKER_USERNAME)/$(DOCKER_TASKNAME)
 
 # Get Image ID and Service ID if they are already running. This will allow us to stop/remove these in subsequent runs
@@ -65,12 +65,7 @@ shell: stop
 	@docker run -it --rm --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME) /bin/bash
 
 run: stop
-	docker service create \
-  	--name=$(DOCKER_TASKNAME) \
-  	--network=piarmy \
-  	--replicas=4 \
-  	-p 9999:80 \
-  	$(DOCKER_IMAGE_NAME)
+	echo "Run!"
 
 push: build
 	docker push $(DOCKER_IMAGE_NAME)

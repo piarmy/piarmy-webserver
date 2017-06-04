@@ -1,8 +1,15 @@
 FROM armhf/alpine
 
-COPY containerFiles /www
-WORKDIR /www
+RUN apk update && apk upgrade && \
+  apk add --no-cache \
+  sudo bash
 
-EXPOSE 80
+RUN echo "docker ALL=(ALL) ALL" | tee -a /etc/sudoers && \
+  adduser -S -s /bin/bash docker && \
+  echo "docker:docker" | chpasswd
 
-CMD ["httpd", "-f", "-p", "80", "-h", "/www"]
+USER docker
+
+WORKDIR /home/docker
+
+CMD ["ls", "-laF", "/"]

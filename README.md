@@ -1,14 +1,9 @@
-docker build -t mattwiater/piarmy-webserver .
+# Run: Interactive, shell
+docker run -it --rm --name=piarmy-alpine mattwiater/piarmy-alpine /bin/bash
+ls -laF
 
-docker run -it --rm -p 9999:80 --name piarmy-webserver mattwiater/piarmy-webserver /bin/ash
+# Run: Interactive
+docker run -it --rm --name=piarmy-alpine mattwiater/piarmy-alpine
 
-docker run -d --rm -p 9999:80 --name piarmy-ws-server mattwiater/piarmy-webserver
-
-# Service mode
-
-docker service create \
-  --name=piarmy-webserver \
-  --network=piarmy \
-  --replicas=4 \
-  -p 9999:80 \
-  mattwiater/piarmy-webserver:latest
+# Run: detatched
+docker run -d --rm --name=piarmy-alpine mattwiater/piarmy-alpine
