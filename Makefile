@@ -14,7 +14,7 @@ DOCKER_USERNAME   = mattwiater
 # Don't edit below this line
 
 # Best to leave as piarmy-alpine for common namespacing of PiArmy projects
-DOCKER_TASKNAME   = piarmy-alpine
+DOCKER_TASKNAME   = piarmy-webserver
 DOCKER_IMAGE_NAME = $(DOCKER_USERNAME)/$(DOCKER_TASKNAME)
 
 # Get Image ID and Service ID if they are already running. This will allow us to stop/remove these in subsequent runs
@@ -62,16 +62,21 @@ shell: stop
 	@echo "Starting:         $(DOCKER_IMAGE_NAME)"
 	@echo "Interactive mode: /bin/bash"
 	@echo ""
-	@docker run -it --rm --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME) /bin/bash
+	@docker run -it --rm --network=piarmy -p 9999:80 --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME) /bin/bash
 
 run: stop
-	docker run -it --rm --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME)
+	@docker run -d --rm --network=piarmy -p 9999:80 --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME)
 
-push: build
+commit: 
+	docker commit $(IMAGE_ID) $(DOCKER_IMAGE_NAME)
+
+push: build run commit
 	docker push $(DOCKER_IMAGE_NAME)
 
 	@echo "Pushed: $(DOCKER_IMAGE_NAME)"
 	@echo ""
+
+	@$(MAKE) stop
 
 .PHONY: list
 list:
