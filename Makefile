@@ -62,15 +62,10 @@ shell: stop
 	@echo "Starting:         $(DOCKER_IMAGE_NAME)"
 	@echo "Interactive mode: /bin/bash"
 	@echo ""
-	@docker run -it --rm --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME) /bin/bash
+	@docker run -it --rm --network=piarmy -p 9999:80 --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME) /bin/bash
 
 run: stop
-	docker service create \
-  	--name=$(DOCKER_TASKNAME) \
-  	--network=piarmy \
-  	--replicas=4 \
-  	-p 9999:80 \
-  	$(DOCKER_IMAGE_NAME)
+	@docker run -d --rm --network=piarmy -p 9999:80 --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME)
 
 push: build
 	docker push $(DOCKER_IMAGE_NAME)
