@@ -65,7 +65,7 @@ shell: stop
 	@docker run -it --rm --name=$(DOCKER_TASKNAME) $(DOCKER_IMAGE_NAME) /bin/bash
 
 run: stop
-	echo "Run!"
+	docker run -it --rm --name=piarmy-alpine mattwiater/piarmy-alpine
 
 push: build
 	docker push $(DOCKER_IMAGE_NAME)
