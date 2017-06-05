@@ -32,14 +32,21 @@
 </head>
 
 <style>
-section.success {
-    padding-bottom: 100px;
-    padding-top: 0px;
+
+#maincontent {
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 1.5em;
 }
 
 div#maincontent {
     padding-bottom: 50px;
-    padding-top: 150px;
+    padding-top: 80px;
 }
 
 ul.links {
@@ -50,6 +57,27 @@ ul.links li {
     list-style-type: none;
 }
 
+.navbar-custom {
+    padding: 5px 0;
+}
+
+.tagline {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: none;
+}
+
+.copy {
+    font-size: 1.2em;
+}
+
+ul.links {
+    font-size: 1.2em;
+}
+
 </style>
 
 <body id="page-top" class="index">
@@ -58,62 +86,50 @@ ul.links li {
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="#page-top">PiArmy</a>
+            <div class="col-lg-8">
+                 <img class="img-responsive" src="img/PiArmy.png" alt="">
             </div>
+
+            <div class="col-lg-4">
+                <span class="tagline">Adventures with an Army of Raspberry Pis</span>
+            </div>
+            
         </div>
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container" id="maincontent" tabindex="-1">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-text">
-                        <h1 class="name">PiArmy</h1>
-                        <hr class="star-light">
-                        <span class="skills">Adventures with an Army of Raspberry Pis</span>
-                    </div>
-                    <img style="margin-top: 50px;" class="img-responsive" src="img/pi.png" alt="">
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success" id="maincontent">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-8 text-center">
                     <h2>About</h2>
                     <hr class="star-light">
+                    <p class="text-left copy">Skateboard prism +1, hoodie air plant next level shoreditch trust fund kombucha. Microdosing cliche meditation cardigan ethical you probably haven't heard of them mixtape messenger bag PBR&B biodiesel, craft beer mumblecore mustache. Fanny pack stumptown slow-carb franzen. La croix flannel etsy, swag succulents twee crucifix jianbing health goth before they sold out next level live-edge retro chia. Synth bicycle rights palo santo, adaptogen truffaut crucifix kickstarter normcore. YOLO taiyaki tilde, farm-to-table gochujang PBR&B tacos scenester franzen slow-carb. Occupy small batch banjo pok pok, gochujang readymade flexitarian pug plaid literally kombucha vaporware sustainable palo santo.</p>
+
+                    <p class="text-left copy">Echo park banh mi paleo artisan, street art umami DIY iPhone gluten-free readymade taxidermy farm-to-table live-edge organic green juice. Church-key wayfarers trust fund, kickstarter hashtag taiyaki mixtape twee. Shoreditch everyday carry fanny pack authentic pour-over squid kogi keffiyeh migas. Live-edge 90's affogato, glossier distillery street art VHS organic narwhal pork belly. 90's XOXO wolf vaporware literally, pickled slow-carb tote bag. Raclette echo park poutine ethical, live-edge cliche whatever crucifix aesthetic selfies. Fashion axe snackwave polaroid forage.</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>This is splash page to demonstrate a simple webserver service for the <a style="color:#fff;text-decoration: underline;" target="_blank" href="http://piarmy.ngrok.io/">PiArmy project</a>. <em>Build the bots! Release the bots! Obey the bots!</em></p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Credit where credit is due: This is the <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> theme from <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com">startbootstrap.com</a>.</p>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 40px;">
-                <div class="col-lg-12 text-center">
-                    <h2>Links</h2>
+
+                <div class="col-lg-4 text-center">
+                    <h2>Tutorials</h2>
                     <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-lg-offset-3">
-                    <ul class="links">
-                        <li><i class="fa fa-fw fa-rocket" aria-hidden="true"></i> PiArmy Blog: <a style="color:#fff;text-decoration: underline;" target="_blank" href="http://piarmy.ngrok.io">piarmy.ngrok.io</a></li>
-                        <li><i class="fa fa-fw fa-rocket" aria-hidden="true"></i> Repository for this project: <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/mwiater/piarmy-webserver">github.com/mwiater/piarmy-webserver</a></li>
+                    <ul class="links text-left" >
+                        <li><i class="fa fa-fw  fa-lightbulb-o" aria-hidden="true"></i> <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/piarmy/piarmy-scripts">Piarmy: Breakdown by Example</a></li>
+                        <li><i class="fa fa-fw  fa-lightbulb-o" aria-hidden="true"></i> <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/piarmy/piarmy-scripts">Piarmy: Breakdown by Example</a></li>
+                        <li><i class="fa fa-fw  fa-lightbulb-o" aria-hidden="true"></i> <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/piarmy/piarmy-scripts">Piarmy: Breakdown by Example</a></li>
+                    </ul>
+
+                    <br /><br />
+
+                    <h2>Repositories</h2>
+                    <hr class="star-light">
+                    <ul class="links text-left" >
+                        <li><i class="fa fa-fw fa-github" aria-hidden="true"></i> PiArmy Scripts: <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/piarmy/piarmy-scripts">https://github.com/piarmy/piarmy-scripts</a></li>
+                        <li><i class="fa fa-fw fa-github" aria-hidden="true"></i> PiArmy Webserver: <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://github.com/piarmy/piarmy-scripts">https://github.com/piarmy/piarmy-webserver</a></li>
                     </ul>
                 </div>
-                
             </div>
+            
         </div>
     </section>
 
@@ -122,8 +138,12 @@ ul.links li {
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6" style="text-align:left;">
                         &copy; PiArmy <script>document.write(new Date().getFullYear());</script>
+                    </div>
+
+                    <div class="col-lg-6" style="text-align:right;">
+                        This is based on the <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> theme from <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com">startbootstrap.com</a>.
                     </div>
                 </div>
             </div>
@@ -148,10 +168,8 @@ ul.links li {
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/freelancer.min.js"></script>
 
 </body>
 
