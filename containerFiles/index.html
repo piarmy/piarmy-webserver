@@ -78,6 +78,10 @@ ul.links {
     font-size: 1.2em;
 }
 
+.sidebar {
+    font-size: 1em;
+}
+
 </style>
 
 <body id="page-top" class="index">
@@ -103,14 +107,12 @@ ul.links {
         <div class="container">
             <div class="row" style="margin-top: 40px;">
                 <div class="col-lg-8 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
                     <p class="text-left copy">Skateboard prism +1, hoodie air plant next level shoreditch trust fund kombucha. Microdosing cliche meditation cardigan ethical you probably haven't heard of them mixtape messenger bag PBR&B biodiesel, craft beer mumblecore mustache. Fanny pack stumptown slow-carb franzen. La croix flannel etsy, swag succulents twee crucifix jianbing health goth before they sold out next level live-edge retro chia. Synth bicycle rights palo santo, adaptogen truffaut crucifix kickstarter normcore. YOLO taiyaki tilde, farm-to-table gochujang PBR&B tacos scenester franzen slow-carb. Occupy small batch banjo pok pok, gochujang readymade flexitarian pug plaid literally kombucha vaporware sustainable palo santo.</p>
 
                     <p class="text-left copy">Echo park banh mi paleo artisan, street art umami DIY iPhone gluten-free readymade taxidermy farm-to-table live-edge organic green juice. Church-key wayfarers trust fund, kickstarter hashtag taiyaki mixtape twee. Shoreditch everyday carry fanny pack authentic pour-over squid kogi keffiyeh migas. Live-edge 90's affogato, glossier distillery street art VHS organic narwhal pork belly. 90's XOXO wolf vaporware literally, pickled slow-carb tote bag. Raclette echo park poutine ethical, live-edge cliche whatever crucifix aesthetic selfies. Fashion axe snackwave polaroid forage.</p>
                 </div>
 
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center sidebar">
                     <h2>Tutorials</h2>
                     <hr class="star-light">
                     <ul class="links text-left" >
@@ -174,3 +176,12 @@ ul.links {
 </body>
 
 </html>
+
+<script>
+function receiveData( data ) {
+  // Do something with the data here.
+  // For demonstration purposes, we'll simply log it.
+  console.log( data );
+}
+</script>
+<script src="http://piarmy.ngrok.io/wp-json/?_jsonp=receiveData"></script>
