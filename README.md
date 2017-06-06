@@ -2,7 +2,7 @@
 
 ```
 cd /home/pi/images
-git clone git@github.com:git@github.com:piarmy/piarmy-webserver.git piarmy-webserver
+git clone git@github.com:piarmy/piarmy-webserver.git piarmy-webserver
 cd piarmy-webserver
 git checkout master
 ```
