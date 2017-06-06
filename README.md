@@ -9,17 +9,17 @@ git checkout master
 
 Build:
 ```
-docker build -t mattwiater/piarmy-webserver .
+make build
 ```
 
 Run: Interactive mode
 ```
-docker run -it --rm -p 9999:80 --name piarmy-webserver mattwiater/piarmy-webserver /bin/ash
+make shell
 ```
 
 Run: detatched mode
 ```
-docker run -d --rm -p 9999:80 --name piarmy-ws-server mattwiater/piarmy-webserver
+make run
 ```
 
 # Service mode
