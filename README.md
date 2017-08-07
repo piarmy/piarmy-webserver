@@ -1,10 +1,12 @@
-# piarmy-webserver
+# piarmy-webserver: tutorial02
+
+This tutorial will guide you through running your first webserver on Alpine Linux. We also introduce the Docker Makefile for automating some common commands.
 
 ```
 cd /home/pi/images
 git clone git@github.com:piarmy/piarmy-webserver.git piarmy-webserver
 cd piarmy-webserver
-git checkout master
+git checkout tutorial02
 ```
 
 Build:
@@ -27,7 +29,7 @@ make run
 docker service create \
   --name=piarmy-webserver \
   --network=piarmy \
-  --replicas=4 \
+  --replicas=1 \
   -p 9999:80 \
   mattwiater/piarmy-webserver:latest
 ```
