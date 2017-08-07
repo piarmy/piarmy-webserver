@@ -4,6 +4,13 @@ This tutorial will guide you through running your first Alpine Linux container o
 
 In the next tutorial, we'll make the container run a webserver.
 
+```
+cd /home/pi/images
+git clone git@github.com:piarmy/piarmy-webserver.git piarmy-webserver
+cd piarmy-webserver
+git checkout tutorial01
+```
+
 #### Run: Interactive, shell
 `docker run -it --rm --name=piarmy-alpine mattwiater/piarmy-alpine /bin/bash
 ls -laF`
