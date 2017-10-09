@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>PiArmy</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/60f35cefdf.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<style>
+
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  font-size: 1.5em;
+}
+
+section#maincontent .main{
+  padding-top: 20px;
+}
+
+section.success {
+  background: #fff;
+  color: #2C3E50;
+}
+
+ul.links {
+  font-size: 1.5em;
+}
+
+ul.links li {
+  list-style-type: none;
+}
+
+.navbar-custom {
+  padding: 5px 0;
+}
+
+.tagline {
+  color: #fff;
+  display: block;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-transform: none;
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.copy {
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+ul.links {
+  font-size: 1.2em;
+}
+
+hr.star-light {
+  border-color: #18BC9C;
+}
+
+hr.star-light:after {
+  color: #18BC9C;
+  background-color: #efefef;
+}
+
+.sidebar {
+  font-size: 0.9em;
+  padding-top:20px;
+  background-color: #efefef;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar .tutorial, .sidebar .repository {
+  margin-bottom:5px;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.excerpt p {
+  margin-left: 25px;
+  font-size: 0.9em;
+  color: #2C3E50;
+  margin-bottom: 0px;
+}
+
+.cssload-triangles {
+  transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  height: 40px;
+  width: 45px;
+  position: relative;
+  left: 50%;
+}
+
+.cssload-tri {
+  position: absolute;
+  animation: cssload-pulse 712.5ms ease-in infinite;
+    -o-animation: cssload-pulse 712.5ms ease-in infinite;
+    -ms-animation: cssload-pulse 712.5ms ease-in infinite;
+    -webkit-animation: cssload-pulse 712.5ms ease-in infinite;
+    -moz-animation: cssload-pulse 712.5ms ease-in infinite;
+  border-top: 13px solid rgba(44,62,80,0.68);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 0px;
+}
+.cssload-tri.cssload-invert {
+  border-top: 0px;
+  border-bottom: 13px solid rgba(44,62,80,0.67);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.cssload-tri:nth-child(1) {
+  left: 15px;
+}
+.cssload-tri:nth-child(2) {
+  left: 7px;
+  top: 13px;
+  animation-delay: -118.75ms;
+    -o-animation-delay: -118.75ms;
+    -ms-animation-delay: -118.75ms;
+    -webkit-animation-delay: -118.75ms;
+    -moz-animation-delay: -118.75ms;
+}
+.cssload-tri:nth-child(3) {
+  left: 15px;
+  top: 13px;
+}
+.cssload-tri:nth-child(4) {
+  left: 22px;
+  top: 13px;
+  animation-delay: -593.75ms;
+    -o-animation-delay: -593.75ms;
+    -ms-animation-delay: -593.75ms;
+    -webkit-animation-delay: -593.75ms;
+    -moz-animation-delay: -593.75ms;
+}
+.cssload-tri:nth-child(5) {
+  top: 27px;
+  animation-delay: -237.5ms;
+    -o-animation-delay: -237.5ms;
+    -ms-animation-delay: -237.5ms;
+    -webkit-animation-delay: -237.5ms;
+    -moz-animation-delay: -237.5ms;
+}
+.cssload-tri:nth-child(6) {
+  top: 27px;
+  left: 7px;
+  animation-delay: -237.5ms;
+    -o-animation-delay: -237.5ms;
+    -ms-animation-delay: -237.5ms;
+    -webkit-animation-delay: -237.5ms;
+    -moz-animation-delay: -237.5ms;
+}
+.cssload-tri:nth-child(7) {
+  top: 27px;
+  left: 15px;
+  animation-delay: -356.25ms;
+    -o-animation-delay: -356.25ms;
+    -ms-animation-delay: -356.25ms;
+    -webkit-animation-delay: -356.25ms;
+    -moz-animation-delay: -356.25ms;
+}
+.cssload-tri:nth-child(8) {
+  top: 27px;
+  left: 22px;
+  animation-delay: -475ms;
+    -o-animation-delay: -475ms;
+    -ms-animation-delay: -475ms;
+    -webkit-animation-delay: -475ms;
+    -moz-animation-delay: -475ms;
+}
+.cssload-tri:nth-child(9) {
+  top: 27px;
+  left: 30px;
+  animation-delay: -475ms;
+    -o-animation-delay: -475ms;
+    -ms-animation-delay: -475ms;
+    -webkit-animation-delay: -475ms;
+    -moz-animation-delay: -475ms;
+}
+
+
+@keyframes cssload-pulse {
+  0% {
+    opacity: 1;
+  }
+  16.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes cssload-pulse {
+  0% {
+    opacity: 1;
+  }
+  16.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes cssload-pulse {
+  0% {
+    opacity: 1;
+  }
+  16.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssload-pulse {
+  0% {
+    opacity: 1;
+  }
+  16.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cssload-pulse {
+  0% {
+    opacity: 1;
+  }
+  16.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.docker-node {
+  font-size:1.2em;
+}
+
+.docker-container {
+  font-size:0.8em;
+  margin-left: 10px;
+}
+
+</style>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="col-lg-7">
+                 <img class="img-responsive" src="img/PiArmy.png" alt="">
+            </div>
+
+            <div class="col-lg-5">
+                <span class="tagline">Adventures with an Army of Raspberry Pis</span>
+            </div>
+            
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- About Section -->
+    <section class="success" id="maincontent">
+        <div class="container">
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-7 main">
+                    <h2 style="margin-bottom:20px;">Active Containers</h2>
+                    <div id="nodes">
+                      
+                    </div>
+                </div>
+
+                <div class="col-lg-5 text-center sidebar">
+                    <h2>Tutorials</h2>
+                    <hr class="star-light">
+                    <div class="links text-left tutorials">
+                      <div class="cssload-triangles" style="margin-top:40px;">
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                      </div>
+                    </div>
+
+                    <br /><br />
+
+                    <h2>Repositories</h2>
+                    <hr class="star-light">
+                    <div class="links text-left repositories">
+                      <div class="cssload-triangles" style="margin-top:20px;">
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                        <div class="cssload-tri"></div>
+                        <div class="cssload-tri cssload-invert"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" style="text-align:left;">
+                        &copy; PiArmy <script>document.write(new Date().getFullYear());</script>
+                    </div>
+
+                    <div class="col-lg-6" style="text-align:right;">
+                        This is based on the <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> theme from <a style="color:#fff;text-decoration: underline;" target="_blank" href="https://startbootstrap.com">startbootstrap.com</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <!-- Theme JavaScript -->
+
+</body>
+
+</html>
+
+<script>
+
+$( document ).ready(function() {
+  var dockerSwarmContainerCount = 0;
+  var dockerSwarmContainers     = [];
+  var dockerSwarmNodeCount      = 0;
+  var dockerSwarmNodes          = [];
+
+  function getContainers(){
+    $.ajax({
+      url: "http://piarmy01:8000/containers?callback=containers",
+
+      // The name of the callback parameter
+      jsonp: "callback",
+   
+      // Tell jQuery we're expecting JSONP
+      dataType: "jsonp",
+   
+      // Work with the response
+      success: function(containers){
+        dockerSwarmContainerCount = containers.length;
+        $.each(containers, function( index, container ) {
+          $.ajax({
+            url: "http://piarmy01:8000/container/"+container[1]+"?callback=containerInfo",
+            
+            // The name of the callback parameter
+            jsonp: "callback",
+         
+            // Tell jQuery we're expecting JSONP
+            dataType: "jsonp",
+         
+            // Work with the response
+            success: function(containerInfo) {
+              containerInfo.node = container[0]
+              dockerSwarmContainers.push(containerInfo);
+
+              if(dockerSwarmContainers.length == dockerSwarmContainerCount){
+                buildGrid();
+              }
+            },
+            error: function( error ) {
+              console.log(error);
+            }
+          });
+        });
+      },
+      error: function( error ) {
+        console.log(error);
+      }
+    });
+  }
+
+  function getNodes(){
+    $.ajax({
+      url: "http://piarmy01:8000/nodes?callback=nodes",
+
+      // The name of the callback parameter
+      jsonp: "callback",
+   
+      // Tell jQuery we're expecting JSONP
+      dataType: "jsonp",
+   
+      // Work with the response
+      success: function(nodes) {
+        dockerSwarmNodeCount = nodes.length;
+        $.each(nodes, function( index, node ) {
+          $.ajax({
+            url: "http://piarmy01:8000/nodes/"+node+"?callback=node",
+
+            // The name of the callback parameter
+            jsonp: "callback",
+         
+            // Tell jQuery we're expecting JSONP
+            dataType: "jsonp",
+         
+            // Work with the response
+            success: function(nodeInfo) {
+              dockerSwarmNodes.push(nodeInfo);
+
+              if(dockerSwarmNodes.length == dockerSwarmNodeCount){
+                getContainers();
+              }
+            },
+            error: function( error ) {
+              console.log(error);
+            }
+          });
+        });
+      },
+      error: function( error ) {
+        console.log(error);
+      }
+    });
+  }
+
+  //This will sort your array
+  function nodeSort(a, b){
+    if (a.Name < b.Name)
+      return -1;
+    if (a.Name > b.Name)
+      return 1;
+    return 0;
+  }
+
+  function buildGrid(){
+    console.log("dockerSwarmNodes:", dockerSwarmNodes);
+    console.log("dockerSwarmContainers:", dockerSwarmContainers);
+
+    dockerSwarmNodes.sort(nodeSort);
+
+    $.each(dockerSwarmNodes, function( index, node ) {
+      $('#nodes').append("<div class='docker-node' id="+node.Id+">"+node.Name+"</div>");
+    });
+
+    $.each(dockerSwarmContainers, function( index, container ) {
+      if(typeof container.serviceData !== "undefined" 
+        && typeof container.serviceData.Endpoint !== "undefined"
+        && typeof container.serviceData.Endpoint.Ports !== "undefined"){
+        $("#nodes #"+container.node+"").append("<div class='docker-container' id="+container.Id+"><i class='fa fa-cubes'></i> <a target='_blank' href='http://"+container.node+":"+container.serviceData.Endpoint.Ports[0].PublishedPort+"'>"+container.serviceData.Spec.Name+"</a></div>");
+      }
+      
+    });
+  }
+
+  getNodes();
+
+  $.ajax({
+      url: "http://piarmy.ngrok.io/wp-json/wp/v2/posts/?categories=17&order=asc&_jsonp=breakdownPosts",
+   
+      // The name of the callback parameter
+      jsonp: "_jsonp",
+   
+      // Tell jQuery we're expecting JSONP
+      dataType: "jsonp",
+   
+      // Work with the response
+      success: function( response ) {
+        $("div.tutorials").html("");
+
+        response.forEach(function(post){
+          var strippedTitle = post.title.rendered.replace('Breakdown by Example: ','');
+          var tutorialLink = "<div class='tutorial'><i class='fa fa-fw  fa-lightbulb-o' aria-hidden='true'></i> <a style='color:#2C3E50;text-decoration: underline;' target='_blank' href='"+post.link+"'>"+strippedTitle+"</a><div class='excerpt'>"+post.excerpt.rendered+"</div></div>";
+
+          $("div.tutorials").append(tutorialLink);
+        });
+      }
+  });
+
+  $.ajax({
+      url: "https://api.github.com/orgs/piarmy/repos?callback=githubCallback",
+   
+      // The name of the callback parameter
+      jsonp: "callback",
+   
+      // Tell jQuery we're expecting JSONP
+      dataType: "jsonp",
+   
+      // Work with the response
+      success: function( response ) {
+        $("div.repositories").html("");
+        response.data.forEach(function(repo){
+          var repoLink = "<div class='repository'><i class='fa fa-fw fa-github' aria-hidden='true'></i> <a style='color:#2C3E50;text-decoration: underline;' target='_blank' href='"+repo.html_url+"'>"+repo.full_name+"</a><div class='excerpt'><p>"+repo.description+"</p></div></div>";
+
+          $("div.repositories").append(repoLink);
+        });
+      }
+  });
+});
+</script>
